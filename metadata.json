@@ -1,0 +1,8 @@
+{
+  "name": "Remix NEXT STEP – ជំហានបន្ទាប់",
+  "description": "វេទិកាណែនាំការអប់រំសម្រាប់សិស្សវិទ្យាល័យកម្ពុជាក្នុងការស្វែងរកសាកលវិទ្យាល័យ ជំនាញ អាហារូបករណ៍ និងមាគ៌ាអាជីព (Education guidance platform for Cambodian high school students).",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

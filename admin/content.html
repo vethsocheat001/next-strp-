@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>គ្រប់គ្រងមាតិកាទំព័រដើម - NEXT STEP Admin</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/admin.css">
+</head>
+<body class="admin-body">
+
+  <aside class="admin-sidebar" id="adminSidebar">
+    <a href="dashboard.html" class="admin-sidebar-brand">
+      <div class="brand-icon-box" style="width: 32px; height: 32px; font-size: 1rem;"><i class="bi bi-shield-lock-fill"></i></div>
+      <div>
+        <div class="lh-1">NEXT STEP</div>
+        <small class="text-muted fw-normal" style="font-size: 0.7rem;">Admin Panel</small>
+      </div>
+    </a>
+    <div class="admin-nav">
+      <div class="admin-nav-item"><a href="dashboard.html" class="admin-nav-link"><i class="bi bi-speedometer2"></i><span>Dashboard</span></a></div>
+      <div class="admin-nav-item"><a href="universities.html" class="admin-nav-link"><i class="bi bi-buildings"></i><span>សាកលវិទ្យាល័យ</span></a></div>
+      <div class="admin-nav-item"><a href="majors.html" class="admin-nav-link"><i class="bi bi-mortarboard"></i><span>មុខជំនាញ</span></a></div>
+      <div class="admin-nav-item"><a href="scholarships.html" class="admin-nav-link"><i class="bi bi-gift"></i><span>អាហារូបករណ៍</span></a></div>
+      <div class="admin-nav-item"><a href="users.html" class="admin-nav-link"><i class="bi bi-people"></i><span>អ្នកប្រើប្រាស់</span></a></div>
+      <div class="admin-nav-item"><a href="news.html" class="admin-nav-link"><i class="bi bi-newspaper"></i><span>ព័ត៌មាន</span></a></div>
+      <div class="admin-nav-item"><a href="categories.html" class="admin-nav-link"><i class="bi bi-tags"></i><span>ជំពូកមុខវិជ្ជា</span></a></div>
+      <div class="admin-nav-item"><a href="content.html" class="admin-nav-link active"><i class="bi bi-layout-text-window-reverse"></i><span>មាតិកាទំព័រដើម</span></a></div>
+      <div class="admin-nav-item border-top border-secondary my-2 pt-2"><a href="profile.html" class="admin-nav-link"><i class="bi bi-person-gear"></i><span>Admin Profile</span></a></div>
+      <div class="admin-nav-item"><a href="settings.html" class="admin-nav-link"><i class="bi bi-gear"></i><span>ការកំណត់</span></a></div>
+    </div>
+  </aside>
+
+  <div class="admin-main">
+    <header class="admin-topbar">
+      <div class="d-flex align-items-center gap-3">
+        <button class="btn btn-light d-lg-none" id="adminSidebarToggle"><i class="bi bi-list fs-5"></i></button>
+        <div class="fw-semibold text-dark fs-5">គ្រប់គ្រងមាតិកាទំព័រដើម (Content Management)</div>
+      </div>
+    </header>
+
+    <main class="admin-content">
+      <div class="card ns-card shadow-sm p-4 max-w-4xl mx-auto bg-white">
+        <form id="content-form">
+          <!-- Hero Section Settings -->
+          <h5 class="fw-bold mb-3 text-primary"><i class="bi bi-aspect-ratio me-2"></i>ផ្នែកខាងលើគេ (Hero Banner)</h5>
+          <div class="row g-3 mb-4 pb-3 border-bottom">
+            <div class="col-12">
+              <label class="form-label small fw-semibold">ចំណងជើងធំ (Hero Headline) *</label>
+              <input type="text" class="form-control" id="content-hero-title" value="ស្វែងរកជំហានបន្ទាប់របស់អ្នក" required>
+            </div>
+            <div class="col-12">
+              <label class="form-label small fw-semibold">ចំណងជើងរង (Hero Subtitle) *</label>
+              <textarea class="form-control" id="content-hero-subtitle" rows="2" required>ស្វែងរកជំនាញ សាកលវិទ្យាល័យ និងអាហារូបករណ៍សម្រាប់អនាគតរបស់អ្នក។ ផ្តល់ព័ត៌មានលម្អិត ច្បាស់លាស់ និងអាចទុកចិត្តបាន ដើម្បីជួយអ្នកធ្វើការសម្រេចចិត្តដ៏ត្រឹមត្រូវ។</textarea>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small fw-semibold">ប្រអប់ស្វែងរក Placeholder</label>
+              <input type="text" class="form-control" value="ស្វែងរកសាកលវិទ្យាល័យ ឬជំនាញ...">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small fw-semibold">ប៊ូតុងអំពាវនាវ (Primary Button)</label>
+              <input type="text" class="form-control" value="ស្វែងរកជំនាញត្រូវនឹងអ្នក">
+            </div>
+          </div>
+
+          <!-- Featured Sections -->
+          <h5 class="fw-bold mb-3 text-primary"><i class="bi bi-star me-2"></i>ការគ្រប់គ្រងផ្នែកពិសេសនៅលើទំព័រដើម</h5>
+          <div class="mb-3 form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="show-pop-unis" checked>
+            <label class="form-check-label fw-semibold" for="show-pop-unis">បង្ហាញផ្នែក "សាកលវិទ្យាល័យពេញនិយម" (Popular Universities)</label>
+          </div>
+          <div class="mb-3 form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="show-pop-majors" checked>
+            <label class="form-check-label fw-semibold" for="show-pop-majors">បង្ហាញផ្នែក "មុខជំនាញសិក្សាពេញនិយម" (Popular Majors)</label>
+          </div>
+          <div class="mb-3 form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="show-quiz-banner" checked>
+            <label class="form-check-label fw-semibold" for="show-quiz-banner">បង្ហាញផ្ទាំងតេស្ត "មិនដឹងថាគួររៀនជំនាញអ្វី?"</label>
+          </div>
+          <div class="mb-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="show-career-path" checked>
+            <label class="form-check-label fw-semibold" for="show-career-path">បង្ហាញគំរូមាគ៌ាអាជីព (Career Path Timeline)</label>
+          </div>
+
+          <div class="text-end border-top pt-3">
+            <button type="submit" class="btn btn-ns-primary px-4">
+              <i class="bi bi-save me-1"></i> រក្សាទុកការផ្លាស់ប្តូរមាតិកា
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="admin-footer">
+      <strong>Next Step Admin Panel</strong> &copy; 2026 Next Step. All rights reserved.
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/js/data.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/admin.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      checkAdminAuth();
+      document.getElementById('content-form')?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        showToast('បានរក្សាទុកមាតិកាទំព័រដើមដោយជោគជ័យ!');
+      });
+    });
+  </script>
+</body>
+</html>

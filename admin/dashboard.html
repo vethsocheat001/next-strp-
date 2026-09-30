@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - NEXT STEP</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/admin.css">
+</head>
+<body class="admin-body">
+
+  <!-- ADMIN SIDEBAR -->
+  <aside class="admin-sidebar" id="adminSidebar">
+    <a href="dashboard.html" class="admin-sidebar-brand">
+      <div class="brand-icon-box" style="width: 32px; height: 32px; font-size: 1rem;">
+        <i class="bi bi-shield-lock-fill"></i>
+      </div>
+      <div>
+        <div class="lh-1">NEXT STEP</div>
+        <small class="text-muted fw-normal" style="font-size: 0.7rem;">Admin Panel</small>
+      </div>
+    </a>
+
+    <div class="admin-nav">
+      <div class="admin-nav-item">
+        <a href="dashboard.html" class="admin-nav-link active">
+          <i class="bi bi-speedometer2"></i>
+          <span>ផ្ទាំងគ្រប់គ្រង (Dashboard)</span>
+        </a>
+      </div>
+      <div class="admin-nav-item">
+        <a href="universities.html" class="admin-nav-link">
+          <i class="bi bi-buildings"></i>
+          <span>សាកលវិទ្យាល័យ</span>
+        </a>
+      </div>
+      <div class="admin-nav-item">
+        <a href="majors.html" class="admin-nav-link">
+          <i class="bi bi-mortarboard"></i>
+          <span>មុខជំនាញ</span>
+        </a>
+      </div>
+      <div class="admin-nav-item">
+        <a href="scholarships.html" class="admin-nav-link">
+          <i class="bi bi-gift"></i>
+          <span>អាហារូបករណ៍</span>
+        </a>
+      </div>
+      <div class="admin-nav-item">
+        <a href="users.html" class="admin-nav-link">
+          <i class="bi bi-people"></i>
+          <span>អ្នកប្រើប្រាស់</span>
+        </a>
+      </div>
+      <div class="admin-nav-item">
+        <a href="news.html" class="admin-nav-link">
+          <i class="bi bi-newspaper"></i>
+          <span>ព័ត៌មាន & សេចក្តីប្រកាស</span>
+        </a>
+      </div>
+      <div class="admin-nav-item">
+        <a href="categories.html" class="admin-nav-link">
+          <i class="bi bi-tags"></i>
+          <span>ជំពូកមុខវិជ្ជា</span>
+        </a>
+      </div>
+      <div class="admin-nav-item">
+        <a href="content.html" class="admin-nav-link">
+          <i class="bi bi-layout-text-window-reverse"></i>
+          <span>គ្រប់គ្រងមាតិកាទំព័រដើម</span>
+        </a>
+      </div>
+      <div class="admin-nav-item border-top border-secondary my-2 pt-2">
+        <a href="profile.html" class="admin-nav-link">
+          <i class="bi bi-person-gear"></i>
+          <span>ព័ត៌មានគណនី Admin</span>
+        </a>
+      </div>
+      <div class="admin-nav-item">
+        <a href="settings.html" class="admin-nav-link">
+          <i class="bi bi-gear"></i>
+          <span>ការកំណត់គេហទំព័រ</span>
+        </a>
+      </div>
+      <div class="admin-nav-item">
+        <a href="/index.html" class="admin-nav-link text-warning">
+          <i class="bi bi-box-arrow-up-right"></i>
+          <span>មើលទំព័រសិស្ស (User Site)</span>
+        </a>
+      </div>
+      <div class="admin-nav-item">
+        <a href="login.html" class="admin-nav-link text-danger" onclick="window.NextStepData.logoutAdmin();">
+          <i class="bi bi-box-arrow-right"></i>
+          <span>ចាកចេញ (Logout)</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="admin-sidebar-footer">
+      <div>Next Step System v1.0</div>
+      <div>&copy; 2026 NEXT STEP</div>
+    </div>
+  </aside>
+
+  <!-- MAIN VIEWPORT -->
+  <div class="admin-main">
+    <!-- TOPBAR -->
+    <header class="admin-topbar">
+      <div class="d-flex align-items-center gap-3">
+        <button class="btn btn-light d-lg-none" id="adminSidebarToggle">
+          <i class="bi bi-list fs-5"></i>
+        </button>
+        <div class="fw-semibold text-dark fs-5">ផ្ទាំងសង្ខេបព័ត៌មាន (Dashboard)</div>
+      </div>
+
+      <div class="d-flex align-items-center gap-3">
+        <a href="/index.html" target="_blank" class="btn btn-sm btn-outline-primary d-none d-sm-inline-flex align-items-center gap-1">
+          <i class="bi bi-eye"></i> មើលគេហទំព័រផ្ទាល់
+        </a>
+        <div class="dropdown">
+          <button class="btn btn-light rounded-circle p-2 position-relative" data-bs-toggle="dropdown">
+            <i class="bi bi-bell"></i>
+            <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+            <li><h6 class="dropdown-header">ការជូនដំណឹងថ្មីៗ</h6></li>
+            <li><a class="dropdown-item small" href="#">មានសិស្សថ្មីចុះឈ្មោះ ៥ នាក់</a></li>
+            <li><a class="dropdown-item small" href="#">អាហារូបករណ៍ MoEYS ត្រូវបានកែប្រែ</a></li>
+          </ul>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <span class="fs-4">👨‍💼</span>
+          <div class="d-none d-md-block lh-sm">
+            <div class="fw-semibold text-dark small">លឹម មករា</div>
+            <div class="text-muted small" style="font-size: 0.75rem;">Admin</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="admin-content">
+      <!-- 4 Stats Cards -->
+      <div class="row g-4 mb-4">
+        <div class="col-12 col-sm-6 col-xl-3">
+          <div class="admin-stat-card shadow-sm">
+            <div>
+              <span class="text-muted small fw-medium">សាកលវិទ្យាល័យសរុប</span>
+              <h2 class="fw-bold text-primary mb-0 mt-1 tabular-nums" id="stat-total-unis">0</h2>
+            </div>
+            <div class="admin-stat-icon bg-primary bg-opacity-10 text-primary">
+              <i class="bi bi-buildings"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-xl-3">
+          <div class="admin-stat-card shadow-sm">
+            <div>
+              <span class="text-muted small fw-medium">មុខជំនាញសរុប</span>
+              <h2 class="fw-bold text-success mb-0 mt-1 tabular-nums" id="stat-total-majors">0</h2>
+            </div>
+            <div class="admin-stat-icon bg-success bg-opacity-10 text-success">
+              <i class="bi bi-mortarboard"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-xl-3">
+          <div class="admin-stat-card shadow-sm">
+            <div>
+              <span class="text-muted small fw-medium">អាហារូបករណ៍</span>
+              <h2 class="fw-bold text-warning mb-0 mt-1 tabular-nums" id="stat-total-schs">0</h2>
+            </div>
+            <div class="admin-stat-icon bg-warning bg-opacity-10 text-warning">
+              <i class="bi bi-gift"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-xl-3">
+          <div class="admin-stat-card shadow-sm">
+            <div>
+              <span class="text-muted small fw-medium">អ្នកប្រើប្រាស់បានចុះឈ្មោះ</span>
+              <h2 class="fw-bold text-info mb-0 mt-1 tabular-nums" id="stat-total-users">0</h2>
+            </div>
+            <div class="admin-stat-icon bg-info bg-opacity-10 text-info">
+              <i class="bi bi-people"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div class="d-flex flex-wrap gap-2 mb-4">
+        <a href="university-add.html" class="btn btn-sm btn-primary">
+          <i class="bi bi-plus-lg me-1"></i> បន្ថែមសាកលវិទ្យាល័យថ្មី
+        </a>
+        <a href="major-add.html" class="btn btn-sm btn-success">
+          <i class="bi bi-plus-lg me-1"></i> បន្ថែមមុខជំនាញថ្មី
+        </a>
+        <a href="scholarship-add.html" class="btn btn-sm btn-warning text-dark">
+          <i class="bi bi-plus-lg me-1"></i> បន្ថែមអាហារូបករណ៍
+        </a>
+        <a href="news.html" class="btn btn-sm btn-outline-secondary">
+          <i class="bi bi-megaphone me-1"></i> ចុះផ្សាយសេចក្តីប្រកាស
+        </a>
+      </div>
+
+      <!-- Tables Section -->
+      <div class="row g-4">
+        <!-- Recent Universities -->
+        <div class="col-lg-6">
+          <div class="card ns-card shadow-sm h-100">
+            <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
+              <h6 class="fw-bold mb-0"><i class="bi bi-buildings text-primary me-2"></i>សាកលវិទ្យាល័យថ្មីៗ</h6>
+              <a href="universities.html" class="small text-decoration-none">មើលទាំងអស់ &rarr;</a>
+            </div>
+            <div class="table-responsive">
+              <table class="table admin-table table-hover align-middle mb-0">
+                <thead>
+                  <tr>
+                    <th>សាកលវិទ្យាល័យ</th>
+                    <th>ប្រភេទ</th>
+                    <th>ទីតាំង</th>
+                    <th>សកម្មភាព</th>
+                  </tr>
+                </thead>
+                <tbody id="dash-recent-unis">
+                  <!-- Populated via JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Registered Users -->
+        <div class="col-lg-6">
+          <div class="card ns-card shadow-sm h-100">
+            <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
+              <h6 class="fw-bold mb-0"><i class="bi bi-people text-success me-2"></i>អ្នកប្រើប្រាស់ថ្មីៗ</h6>
+              <a href="users.html" class="small text-decoration-none">មើលទាំងអស់ &rarr;</a>
+            </div>
+            <div class="table-responsive">
+              <table class="table admin-table table-hover align-middle mb-0">
+                <thead>
+                  <tr>
+                    <th>អ្នកប្រើប្រាស់</th>
+                    <th>តួនាទី</th>
+                    <th>ស្ថានភាព</th>
+                    <th>ថ្ងៃចុះឈ្មោះ</th>
+                  </tr>
+                </thead>
+                <tbody id="dash-recent-users">
+                  <!-- Populated via JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ADMIN FOOTER -->
+    <footer class="admin-footer d-flex justify-content-between align-items-center">
+      <div><strong>Next Step Admin Panel</strong> &copy; 2026 Next Step. All rights reserved.</div>
+      <div>Cambodia Education Guidance Platform</div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/js/data.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/admin.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      checkAdminAuth();
+      initAdminDashboard();
+    });
+  </script>
+</body>
+</html>

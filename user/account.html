@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>គណនីរបស់ខ្ញុំ - NEXT STEP – ជំហានបន្ទាប់</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/user.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg user-navbar sticky-top">
+    <div class="container">
+      <a class="brand-logo" href="/index.html">
+        <div class="brand-icon-box"><i class="bi bi-mortarboard-fill"></i></div>
+        <div>
+          <span class="fs-5 fw-bold text-primary">NEXT STEP</span>
+          <span class="d-none d-sm-inline-block text-secondary small fw-medium ms-1">| ជំហានបន្ទាប់</span>
+        </div>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#userNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="userNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="/index.html">ទំព័រដើម</a></li>
+          <li class="nav-item"><a class="nav-link" href="universities.html">សាកលវិទ្យាល័យ</a></li>
+          <li class="nav-item"><a class="nav-link" href="majors.html">ជំនាញ</a></li>
+          <li class="nav-item"><a class="nav-link" href="scholarships.html">អាហារូបករណ៍</a></li>
+          <li class="nav-item"><a class="nav-link" href="compare.html">ប្រៀបធៀប</a></li>
+          <li class="nav-item"><a class="nav-link" href="find-major.html">ស្វែងរកជំនាញ</a></li>
+          <li class="nav-item"><a class="nav-link" href="career-path.html">មាគ៌ាអាជីព</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">អំពីយើង</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+          <a href="favorites.html" class="btn btn-outline-light text-dark position-relative p-2" title="បញ្ជីរក្សាទុក">
+            <i class="bi bi-heart fs-5 text-danger"></i>
+            <span id="nav-fav-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display:none;">0</span>
+          </a>
+          <a href="account.html" class="btn btn-primary d-flex align-items-center gap-2">
+            <i class="bi bi-person-circle"></i>
+            <span>គណនី</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN ACCOUNT -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Profile Overview Card -->
+        <div class="col-lg-4">
+          <div class="card ns-card p-4 text-center mb-4">
+            <div class="rounded-circle bg-primary bg-opacity-10 text-primary d-inline-flex align-items-center justify-content-center mx-auto mb-3" style="width: 88px; height: 88px; font-size: 2.5rem;">
+              🧑‍🎓
+            </div>
+            <h4 class="fw-bold mb-1" id="profile-name">សូចិត្រ វ៉េត (Socheat Veth)</h4>
+            <span class="text-muted small mb-3 d-block">សិស្សទើបបញ្ចប់បាក់ឌុប ២០២៦</span>
+
+            <div class="text-start small border-top pt-3 mb-4">
+              <div class="mb-2"><i class="bi bi-envelope text-primary me-2"></i>socheatveth24@gmail.com</div>
+              <div class="mb-2"><i class="bi bi-telephone text-primary me-2"></i>+855 (0)98 765 432</div>
+              <div class="mb-0"><i class="bi bi-geo-alt text-danger me-2"></i>រាជធានីភ្នំពេញ (Phnom Penh)</div>
+            </div>
+
+            <button class="btn btn-outline-primary btn-sm w-100 mb-2" data-bs-toggle="modal" data-bs-target="#editProfileModal">
+              <i class="bi bi-pencil me-1"></i> កែប្រែព័ត៌មានផ្ទាល់ខ្លួន
+            </button>
+            <a href="/index.html" class="btn btn-outline-secondary btn-sm w-100" onclick="showToast('បានចាកចេញពីគណនី');">
+              <i class="bi bi-box-arrow-right me-1"></i> ចាកចេញ (Logout)
+            </a>
+          </div>
+
+          <!-- Quick Navigation Card -->
+          <div class="card ns-card p-3">
+            <div class="list-group list-group-flush">
+              <a href="favorites.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-2.5">
+                <span><i class="bi bi-heart text-danger me-2"></i>បញ្ជីដែលបានរក្សាទុក</span>
+                <i class="bi bi-chevron-right text-muted small"></i>
+              </a>
+              <a href="compare.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-2.5">
+                <span><i class="bi bi-arrow-left-right text-primary me-2"></i>ការប្រៀបធៀបសាលារបស់ខ្ញុំ</span>
+                <i class="bi bi-chevron-right text-muted small"></i>
+              </a>
+              <a href="find-major.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-2.5">
+                <span><i class="bi bi-magic text-warning me-2"></i>តេស្តស្វែងរកជំនាញ</span>
+                <i class="bi bi-chevron-right text-muted small"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Details, Comparison, Notifications, Settings -->
+        <div class="col-lg-8">
+          <!-- Summary Cards -->
+          <div class="row g-3 mb-4">
+            <div class="col-md-4">
+              <div class="p-3 border rounded-3 bg-white text-center">
+                <span class="fs-3 fw-bold text-primary d-block mb-1" id="acc-fav-uni-count">3</span>
+                <span class="text-muted small">សាកលវិទ្យាល័យរក្សាទុក</span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="p-3 border rounded-3 bg-white text-center">
+                <span class="fs-3 fw-bold text-success d-block mb-1" id="acc-fav-major-count">2</span>
+                <span class="text-muted small">មុខជំនាញរក្សាទុក</span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="p-3 border rounded-3 bg-white text-center">
+                <span class="fs-3 fw-bold text-warning d-block mb-1" id="acc-fav-sch-count">2</span>
+                <span class="text-muted small">អាហារូបករណ៍រក្សាទុក</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- My Comparison Quick Card -->
+          <div class="card ns-card p-4 mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="fw-bold mb-0"><i class="bi bi-arrow-left-right text-primary me-2"></i>ការប្រៀបធៀបសាកលវិទ្យាល័យដែលបានរក្សាទុក</h5>
+              <a href="compare.html" class="btn btn-sm btn-ns-outline-primary">បើកទំព័រប្រៀបធៀប</a>
+            </div>
+            <div class="row g-3" id="acc-comparison-summary">
+              <div class="col-6">
+                <div class="p-3 border rounded bg-light text-center">
+                  <span class="fs-4">🎓</span>
+                  <div class="fw-semibold text-dark mt-1">សាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ (RUPP)</div>
+                  <span class="badge bg-success small mt-1">រដ្ឋ (Public)</span>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="p-3 border rounded bg-light text-center">
+                  <span class="fs-4">⚙️</span>
+                  <div class="fw-semibold text-dark mt-1">វិទ្យាស្ថានបច្ចេកវិទ្យាកម្ពុជា (ITC)</div>
+                  <span class="badge bg-success small mt-1">រដ្ឋ (Public)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notifications -->
+          <div class="card ns-card p-4 mb-4">
+            <h5 class="fw-bold mb-3"><i class="bi bi-bell text-warning me-2"></i>ការជូនដំណឹងអប់រំ និងអាហារូបករណ៍ (Notifications)</h5>
+            <div class="list-group list-group-flush">
+              <div class="list-group-item px-0 py-3 d-flex align-items-start gap-3">
+                <div class="rounded-circle p-2 bg-success bg-opacity-10 text-success fs-5">
+                  <i class="bi bi-gift"></i>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">អាហារូបករណ៍រដ្ឋាភិបាលកម្ពុជា (MoEYS) បានបើកទទួលពាក្យ!</h6>
+                  <p class="small text-muted mb-1">សូមប្រញាប់រៀបចំឯកសារសញ្ញាបត្របាក់ឌុប និងទម្រង់បែបបទដាក់ពាក្យ មុនថ្ងៃទី 15 តុលា។</p>
+                  <span class="text-xs text-muted">២ ម៉ោងមុន</span>
+                </div>
+              </div>
+
+              <div class="list-group-item px-0 py-3 d-flex align-items-start gap-3">
+                <div class="rounded-circle p-2 bg-primary bg-opacity-10 text-primary fs-5">
+                  <i class="bi bi-calendar-event"></i>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">ទិវាបើកទូលាយ (Open Day) សាកលវិទ្យាល័យ RUPP & CADT</h6>
+                  <p class="small text-muted mb-1">អញ្ជើញចូលរួមស្វែងយល់ពីមន្ទីរពិសោធន៍ AI និងជួបផ្ទាល់ជាមួយសាស្ត្រាចារ្យនៅចុងសប្តាហ៍នេះ។</p>
+                  <span class="text-xs text-muted">ម្សិលមិញ</span>
+                </div>
+              </div>
+
+              <div class="list-group-item px-0 py-3 d-flex align-items-start gap-3">
+                <div class="rounded-circle p-2 bg-warning bg-opacity-10 text-warning fs-5">
+                  <i class="bi bi-exclamation-triangle"></i>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">អាហារូបករណ៍ Paragon U 100% ជិតផុតកំណត់</h6>
+                  <p class="small text-muted mb-1">នៅសល់តែ ៥ ថ្ងៃទៀតប៉ុណ្ណោះសម្រាប់ការចុះឈ្មោះប្រឡងអាហារូបករណ៍ប្រចាំឆ្នាំ។</p>
+                  <span class="text-xs text-muted">៣ ថ្ងៃមុន</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Account Settings -->
+          <div class="card ns-card p-4">
+            <h5 class="fw-bold mb-3"><i class="bi bi-gear text-secondary me-2"></i>ការកំណត់គណនី (Settings)</h5>
+            <div class="form-check form-switch mb-3">
+              <input class="form-check-input" type="checkbox" id="notif-email" checked>
+              <label class="form-check-label small" for="notif-email">ទទួលអ៊ីមែលរំលឹកពេលមានអាហារូបករណ៍ថ្មីត្រូវនឹងចំណូលចិត្ត</label>
+            </div>
+            <div class="form-check form-switch mb-4">
+              <input class="form-check-input" type="checkbox" id="notif-push" checked>
+              <label class="form-check-label small" for="notif-push">បើកការជូនដំណឹងអំពីកាលបរិច្ឆេទផុតកំណត់នៃអាហារូបករណ៍ដែលបានរក្សាទុក</label>
+            </div>
+
+            <button class="btn btn-sm btn-ns-primary" onclick="showToast('បានរក្សាទុកការកំណត់');">
+              រក្សាទុកការកំណត់
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Edit Profile Modal -->
+  <div class="modal fade" id="editProfileModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold">កែប្រែព័ត៌មានផ្ទាល់ខ្លួន</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="editProfileForm">
+            <div class="mb-3">
+              <label class="form-label small fw-semibold">ឈ្មោះពេញ</label>
+              <input type="text" id="edit-name" class="form-control" value="សូចិត្រ វ៉េត (Socheat Veth)">
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-semibold">អ៊ីមែល</label>
+              <input type="email" id="edit-email" class="form-control" value="socheatveth24@gmail.com">
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-semibold">លេខទូរស័ព្ទ</label>
+              <input type="tel" id="edit-phone" class="form-control" value="+855 98 765 432">
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-semibold">ទីលំនៅបច្ចុប្បន្ន</label>
+              <input type="text" id="edit-loc" class="form-control" value="រាជធានីភ្នំពេញ">
+            </div>
+            <div class="text-end">
+              <button type="button" class="btn btn-light" data-bs-dismiss="modal">បោះបង់</button>
+              <button type="submit" class="btn btn-ns-primary">រក្សាទុកការកែប្រែ</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="user-footer">
+    <div class="container text-center small text-white-50">
+      &copy; 2026 NEXT STEP – ជំហានបន្ទាប់។ រក្សាសិទ្ធិគ្រប់យ៉ាង។
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/js/data.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.NextStepData) {
+        const favs = window.NextStepData.getFavorites();
+        document.getElementById('acc-fav-uni-count').textContent = favs.universities?.length || 0;
+        document.getElementById('acc-fav-major-count').textContent = favs.majors?.length || 0;
+        document.getElementById('acc-fav-sch-count').textContent = favs.scholarships?.length || 0;
+      }
+
+      document.getElementById('editProfileForm')?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const newName = document.getElementById('edit-name').value;
+        document.getElementById('profile-name').textContent = newName;
+        bootstrap.Modal.getInstance(document.getElementById('editProfileModal'))?.hide();
+        showToast('បានកែប្រែព័ត៌មានគណនីដោយជោគជ័យ!');
+      });
+    });
+  </script>
+</body>
+</html>

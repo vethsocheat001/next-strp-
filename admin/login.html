@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ចូលផ្ទាំងគ្រប់គ្រង Admin - NEXT STEP</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/admin.css">
+</head>
+<body class="bg-light d-flex align-items-center justify-content-center min-vh-100 p-3">
+
+  <div class="card ns-card shadow border-0" style="max-width: 420px; width: 100%;">
+    <div class="card-body p-4 p-md-5">
+      <!-- Brand Logo -->
+      <div class="text-center mb-4">
+        <div class="brand-icon-box mx-auto mb-2" style="width: 52px; height: 52px; font-size: 1.6rem;">
+          <i class="bi bi-shield-lock-fill"></i>
+        </div>
+        <h4 class="fw-bold text-dark mb-1">NEXT STEP ADMIN</h4>
+        <span class="text-muted small">ចូលផ្ទាំងគ្រប់គ្រងទិន្នន័យគេហទំព័រ</span>
+      </div>
+
+      <!-- Demo Info Notice -->
+      <div class="alert alert-primary bg-primary bg-opacity-10 border-0 small py-2 px-3 mb-4 text-primary">
+        <i class="bi bi-info-circle me-1"></i> <strong>គណនីសាកល្បង (Demo Credentials):</strong><br>
+        អ៊ីមែល: <code>admin@nextstep.kh</code><br>
+        ពាក្យសម្ងាត់: <code>admin123</code>
+      </div>
+
+      <form id="adminLoginForm">
+        <!-- Email -->
+        <div class="mb-3">
+          <label class="form-label small fw-semibold text-muted">អ៊ីមែល (Email)</label>
+          <div class="input-group">
+            <span class="input-group-text bg-white"><i class="bi bi-envelope"></i></span>
+            <input type="email" id="adminEmail" class="form-control" value="admin@nextstep.kh" required>
+          </div>
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+          <div class="d-flex justify-content-between align-items-center">
+            <label class="form-label small fw-semibold text-muted">ពាក្យសម្ងាត់ (Password)</label>
+            <a href="#" class="small text-decoration-none" onclick="alert('សម្រាប់គណនី Demo សូមប្រើ: admin123'); return false;">ភ្លេចពាក្យសម្ងាត់?</a>
+          </div>
+          <div class="input-group">
+            <span class="input-group-text bg-white"><i class="bi bi-key"></i></span>
+            <input type="password" id="adminPassword" class="form-control" value="admin123" required>
+            <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+              <i class="bi bi-eye" id="eyeIcon"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Remember Me -->
+        <div class="mb-4 form-check">
+          <input type="checkbox" class="form-check-input" id="rememberMe" checked>
+          <label class="form-check-label small" for="rememberMe">ចងចាំខ្ញុំក្នុងកម្មវិធីរុករកនេះ</label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-ns-primary w-100 py-2.5 fw-semibold mb-3">
+          <i class="bi bi-box-arrow-in-right me-1"></i> ចូលគ្រប់គ្រង (Login)
+        </button>
+
+        <div class="text-center">
+          <a href="/index.html" class="small text-muted text-decoration-none">
+            &larr; ត្រឡប់ទៅកាន់ទំព័រដើមសិស្ស (Student Side)
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/js/data.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script>
+    // Password visibility toggle
+    document.getElementById('togglePassword')?.addEventListener('click', () => {
+      const passInput = document.getElementById('adminPassword');
+      const eyeIcon = document.getElementById('eyeIcon');
+      if (passInput.type === 'password') {
+        passInput.type = 'text';
+        eyeIcon.classList.remove('bi-eye');
+        eyeIcon.classList.add('bi-eye-slash');
+      } else {
+        passInput.type = 'password';
+        eyeIcon.classList.remove('bi-eye-slash');
+        eyeIcon.classList.add('bi-eye');
+      }
+    });
+
+    // Form submit
+    document.getElementById('adminLoginForm')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('adminEmail').value.trim();
+      const pass = document.getElementById('adminPassword').value.trim();
+
+      if (email && pass) {
+        window.NextStepData.loginAdmin(email, pass);
+        window.location.href = 'dashboard.html';
+      } else {
+        alert('សូមបំពេញអ៊ីមែល និងពាក្យសម្ងាត់!');
+      }
+    });
+  </script>
+</body>
+</html>

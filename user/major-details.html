@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ព័ត៌មានលម្អិតមុខជំនាញ - NEXT STEP</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/user.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg user-navbar sticky-top">
+    <div class="container">
+      <a class="brand-logo" href="/index.html">
+        <div class="brand-icon-box">
+          <i class="bi bi-mortarboard-fill"></i>
+        </div>
+        <div>
+          <span class="fs-5 fw-bold text-primary">NEXT STEP</span>
+          <span class="d-none d-sm-inline-block text-secondary small fw-medium ms-1">| ជំហានបន្ទាប់</span>
+        </div>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#userNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="userNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="/index.html">ទំព័រដើម</a></li>
+          <li class="nav-item"><a class="nav-link" href="universities.html">សាកលវិទ្យាល័យ</a></li>
+          <li class="nav-item"><a class="nav-link active" href="majors.html">ជំនាញ</a></li>
+          <li class="nav-item"><a class="nav-link" href="scholarships.html">អាហារូបករណ៍</a></li>
+          <li class="nav-item"><a class="nav-link" href="compare.html">ប្រៀបធៀប</a></li>
+          <li class="nav-item"><a class="nav-link" href="find-major.html">ស្វែងរកជំនាញ</a></li>
+          <li class="nav-item"><a class="nav-link" href="career-path.html">មាគ៌ាអាជីព</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">អំពីយើង</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+          <a href="favorites.html" class="btn btn-outline-light text-dark position-relative p-2" title="បញ្ជីរក្សាទុក">
+            <i class="bi bi-heart fs-5 text-danger"></i>
+            <span id="nav-fav-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display:none;">0</span>
+          </a>
+          <a href="account.html" class="btn btn-outline-primary d-flex align-items-center gap-2">
+            <i class="bi bi-person-circle"></i>
+            <span>គណនី</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <section class="bg-white border-bottom py-4">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-3 small">
+          <li class="breadcrumb-item"><a href="/index.html" class="text-decoration-none">ទំព័រដើម</a></li>
+          <li class="breadcrumb-item"><a href="majors.html" class="text-decoration-none">មុខជំនាញ</a></li>
+          <li class="breadcrumb-item active" id="major-title-kh" aria-current="page">...</li>
+        </ol>
+      </nav>
+
+      <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+        <span id="major-category-badge" class="badge bg-primary bg-opacity-10 text-primary border border-primary-subtle px-3 py-1.5 fw-semibold">...</span>
+        <span class="text-muted small"><i class="bi bi-clock me-1"></i> រយៈពេល: <strong id="major-duration">...</strong></span>
+        <span class="text-muted small ms-2"><i class="bi bi-award me-1"></i> សញ្ញាបត្រ: <strong id="major-degree">...</strong></span>
+      </div>
+
+      <h1 class="display-6 fw-bold mb-1" id="major-title-kh-main"></h1>
+      <p class="fs-5 text-muted mb-0" id="major-title-en">...</p>
+    </div>
+  </section>
+
+  <!-- MAIN BODY -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <!-- Overview Card -->
+          <div class="card ns-card p-4 mb-4">
+            <h4 class="fw-bold mb-3"><i class="bi bi-file-earmark-text text-primary me-2"></i>អំពីមុខជំនាញ</h4>
+            <p id="major-description" class="text-secondary leading-relaxed"></p>
+
+            <h5 class="fw-bold mt-4 mb-2"><i class="bi bi-person-check text-success me-2"></i>សិស្សដែលស័ក្តិសមជាមួយជំនាញនេះ</h5>
+            <p id="major-suitable" class="text-secondary mb-0"></p>
+          </div>
+
+          <!-- What You Learn Card -->
+          <div class="card ns-card p-4 mb-4">
+            <h4 class="fw-bold mb-3"><i class="bi bi-book-half text-info me-2"></i>អ្វីដែលអ្នកនឹងត្រូវរៀន (What You Learn)</h4>
+            <ul id="major-learn-list" class="list-unstyled mb-0">
+              <!-- JS populated -->
+            </ul>
+          </div>
+
+          <!-- Career Opportunities -->
+          <div class="card ns-card p-4 mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h4 class="fw-bold mb-0"><i class="bi bi-briefcase text-success me-2"></i>ឱកាសការងារ (Career Opportunities)</h4>
+              <span class="badge bg-success bg-opacity-10 text-success border border-success-subtle p-2">
+                ប្រាក់ខែប៉ាន់ស្មាន: <span id="major-salary" class="fw-bold">...</span>
+              </span>
+            </div>
+            <div class="row" id="major-career-list">
+              <!-- JS populated -->
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <!-- Required Skills -->
+          <div class="card ns-card p-4 mb-4">
+            <h5 class="fw-bold mb-3"><i class="bi bi-stars text-warning me-2"></i>ជំនាញចាំបាច់ (Required Skills)</h5>
+            <div id="major-skills-list" class="d-flex flex-wrap gap-2">
+              <!-- JS populated -->
+            </div>
+          </div>
+
+          <!-- Career Path Link -->
+          <div class="card ns-card p-4 mb-4 bg-light border-primary">
+            <h5 class="fw-bold text-primary mb-2"><i class="bi bi-signpost-split me-2"></i>ចង់មើលមាគ៌ាអាជីព?</h5>
+            <p class="small text-muted mb-3">ស្វែងយល់ពីជំហានបន្ទាប់ពីការបញ្ចប់ការសិក្សារហូតដល់ក្លាយជាអ្នកជំនាញជាន់ខ្ពស់។</p>
+            <a href="career-path.html" class="btn btn-sm btn-ns-primary w-100">
+              មើលមាគ៌ាអាជីពពេញលេញ
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Offering Universities Section -->
+      <div class="mt-5">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h4 class="fw-bold mb-0">សាកលវិទ្យាល័យដែលបណ្តុះបណ្តាលជំនាញនេះ</h4>
+          <a href="universities.html" class="btn btn-sm btn-outline-secondary">មើលសាកលវិទ្យាល័យទាំងអស់</a>
+        </div>
+        <div class="row" id="major-universities-list">
+          <!-- JS populated -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="user-footer">
+    <div class="container text-center small text-white-50">
+      &copy; 2026 NEXT STEP – ជំហានបន្ទាប់។ រក្សាសិទ្ធិគ្រប់យ៉ាង។
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/js/data.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/user.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initMajorDetailsPage();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>បញ្ជីដែលបានរក្សាទុក (Favorites) - NEXT STEP</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/user.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg user-navbar sticky-top">
+    <div class="container">
+      <a class="brand-logo" href="/index.html">
+        <div class="brand-icon-box"><i class="bi bi-mortarboard-fill"></i></div>
+        <div>
+          <span class="fs-5 fw-bold text-primary">NEXT STEP</span>
+          <span class="d-none d-sm-inline-block text-secondary small fw-medium ms-1">| ជំហានបន្ទាប់</span>
+        </div>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#userNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="userNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="/index.html">ទំព័រដើម</a></li>
+          <li class="nav-item"><a class="nav-link" href="universities.html">សាកលវិទ្យាល័យ</a></li>
+          <li class="nav-item"><a class="nav-link" href="majors.html">ជំនាញ</a></li>
+          <li class="nav-item"><a class="nav-link" href="scholarships.html">អាហារូបករណ៍</a></li>
+          <li class="nav-item"><a class="nav-link" href="compare.html">ប្រៀបធៀប</a></li>
+          <li class="nav-item"><a class="nav-link" href="find-major.html">ស្វែងរកជំនាញ</a></li>
+          <li class="nav-item"><a class="nav-link" href="career-path.html">មាគ៌ាអាជីព</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">អំពីយើង</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+          <a href="favorites.html" class="btn btn-outline-light text-dark position-relative p-2 active" title="បញ្ជីរក្សាទុក">
+            <i class="bi bi-heart fs-5 text-danger"></i>
+            <span id="nav-fav-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display:none;">0</span>
+          </a>
+          <a href="account.html" class="btn btn-outline-primary d-flex align-items-center gap-2">
+            <i class="bi bi-person-circle"></i>
+            <span>គណនី</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <section class="py-4 bg-white border-bottom">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-2 small">
+          <li class="breadcrumb-item"><a href="/index.html" class="text-decoration-none">ទំព័រដើម</a></li>
+          <li class="breadcrumb-item active" aria-current="page">បញ្ជីរក្សាទុក</li>
+        </ol>
+      </nav>
+      <h2 class="fw-bold mb-1"><i class="bi bi-heart-fill text-danger me-2"></i>បញ្ជីដែលបានរក្សាទុក (My Favorites)</h2>
+      <p class="text-muted mb-0">សាកលវិទ្យាល័យ មុខជំនាញ និងអាហារូបករណ៍ដែលអ្នកបានចំណាំទុកសម្រាប់ពិចារណា</p>
+    </div>
+  </section>
+
+  <!-- FAVORITES CONTENT -->
+  <section class="py-5">
+    <div class="container">
+      <!-- 1. Favorite Universities -->
+      <div class="mb-5">
+        <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
+          <h4 class="fw-bold mb-0"><i class="bi bi-buildings text-primary me-2"></i>សាកលវិទ្យាល័យដែលបានរក្សាទុក</h4>
+          <a href="universities.html" class="btn btn-sm btn-outline-primary">+ រកមើលបន្ថែម</a>
+        </div>
+        <div class="row" id="fav-universities-grid">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+
+      <!-- 2. Favorite Majors -->
+      <div class="mb-5">
+        <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
+          <h4 class="fw-bold mb-0"><i class="bi bi-mortarboard text-success me-2"></i>មុខជំនាញដែលបានរក្សាទុក</h4>
+          <a href="majors.html" class="btn btn-sm btn-outline-primary">+ រកមើលបន្ថែម</a>
+        </div>
+        <div class="row" id="fav-majors-grid">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+
+      <!-- 3. Saved Scholarships -->
+      <div class="mb-5">
+        <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
+          <h4 class="fw-bold mb-0"><i class="bi bi-gift text-warning me-2"></i>អាហារូបករណ៍ដែលបានរក្សាទុក</h4>
+          <a href="scholarships.html" class="btn btn-sm btn-outline-primary">+ រកមើលបន្ថែម</a>
+        </div>
+        <div class="row" id="fav-scholarships-grid">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="user-footer">
+    <div class="container text-center small text-white-50">
+      &copy; 2026 NEXT STEP – ជំហានបន្ទាប់។ រក្សាសិទ្ធិគ្រប់យ៉ាង។
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/js/data.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/user.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initFavoritesPage();
+    });
+  </script>
+</body>
+</html>

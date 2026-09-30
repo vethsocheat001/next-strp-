@@ -1,0 +1,137 @@
+/* ==========================================================================
+   NEXT STEP – ជំហានបន្ទាប់
+   Main Core Stylesheet
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --ns-primary: #1d4ed8;
+  --ns-primary-hover: #1e40af;
+  --ns-primary-light: #eff6ff;
+  --ns-primary-subtle: #dbeafe;
+  --ns-secondary: #059669;
+  --ns-secondary-hover: #047857;
+  --ns-secondary-light: #ecfdf5;
+  --ns-dark: #0f172a;
+  --ns-slate-700: #334155;
+  --ns-slate-600: #475569;
+  --ns-slate-500: #64748b;
+  --ns-slate-400: #94a3b8;
+  --ns-slate-200: #e2e8f0;
+  --ns-slate-100: #f1f5f9;
+  --ns-slate-50: #f8fafc;
+  --ns-white: #ffffff;
+  --ns-font-base: 'Poppins', 'Noto Sans Khmer', -apple-system, BlinkMacSystemFont, sans-serif;
+  --ns-font-khmer: 'Noto Sans Khmer', 'Poppins', sans-serif;
+  --ns-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --ns-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --ns-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+  --ns-radius-sm: 6px;
+  --ns-radius-md: 10px;
+  --ns-radius-lg: 14px;
+}
+
+body {
+  font-family: var(--ns-font-base);
+  color: var(--ns-slate-700);
+  background-color: var(--ns-slate-50);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-khmer {
+  font-family: var(--ns-font-khmer);
+}
+
+/* Primary Button Styling */
+.btn-ns-primary {
+  background-color: var(--ns-primary);
+  border-color: var(--ns-primary);
+  color: #fff;
+  font-weight: 500;
+  border-radius: var(--ns-radius-md);
+  padding: 0.55rem 1.25rem;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-ns-primary:hover, .btn-ns-primary:focus {
+  background-color: var(--ns-primary-hover);
+  border-color: var(--ns-primary-hover);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.25);
+}
+
+.btn-ns-secondary {
+  background-color: var(--ns-secondary);
+  border-color: var(--ns-secondary);
+  color: #fff;
+  font-weight: 500;
+  border-radius: var(--ns-radius-md);
+  padding: 0.55rem 1.25rem;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-ns-secondary:hover, .btn-ns-secondary:focus {
+  background-color: var(--ns-secondary-hover);
+  border-color: var(--ns-secondary-hover);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25);
+}
+
+.btn-ns-outline-primary {
+  background-color: transparent;
+  border: 1px solid var(--ns-primary);
+  color: var(--ns-primary);
+  font-weight: 500;
+  border-radius: var(--ns-radius-md);
+  padding: 0.5rem 1.2rem;
+  transition: all 0.2s ease;
+}
+.btn-ns-outline-primary:hover {
+  background-color: var(--ns-primary-light);
+  color: var(--ns-primary-hover);
+  border-color: var(--ns-primary-hover);
+}
+
+/* Cards */
+.ns-card {
+  background: #ffffff;
+  border: 1px solid var(--ns-slate-200);
+  border-radius: var(--ns-radius-lg);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  overflow: hidden;
+}
+.ns-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--ns-shadow-lg);
+  border-color: #cbd5e1;
+}
+
+/* Typography discipline */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--ns-dark);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+/* Clean Unboxed Metadata styling */
+.meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.825rem;
+  color: var(--ns-slate-500);
+}
+.meta-separator {
+  color: var(--ns-slate-400);
+  margin: 0 0.35rem;
+}
+
+/* Tabular figures for stats and numbers */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Toast container */
+.toast-container {
+  z-index: 1090;
+}

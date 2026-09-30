@@ -1,0 +1,253 @@
+/* ==========================================================================
+   NEXT STEP – ជំហានបន្ទាប់
+   Student-Facing Stylesheet
+   ========================================================================== */
+
+/* Navbar */
+.user-navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--ns-slate-200);
+  transition: all 0.2s ease;
+}
+.user-navbar .nav-link {
+  color: var(--ns-slate-600);
+  font-weight: 500;
+  font-size: 0.925rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--ns-radius-sm);
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+.user-navbar .nav-link:hover,
+.user-navbar .nav-link.active {
+  color: var(--ns-primary);
+  background-color: var(--ns-primary-light);
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 700;
+  color: var(--ns-primary);
+  text-decoration: none;
+}
+.brand-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--ns-primary) 0%, #3b82f6 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
+  padding: 3.5rem 0 4.5rem;
+  overflow: hidden;
+}
+.hero-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ns-dark);
+  margin-bottom: 1rem;
+}
+.hero-subtitle {
+  font-size: 1.125rem;
+  color: var(--ns-slate-600);
+  margin-bottom: 2rem;
+  max-width: 620px;
+}
+.hero-search-box {
+  background: #ffffff;
+  border: 1px solid var(--ns-slate-200);
+  border-radius: var(--ns-radius-lg);
+  padding: 0.5rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+}
+
+.hero-img-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 35px -10px rgba(15, 23, 42, 0.15);
+  border: 1px solid var(--ns-slate-200);
+}
+.hero-img-wrapper img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.hero-img-wrapper:hover img {
+  transform: scale(1.02);
+}
+
+/* Stat Cards */
+.stat-card {
+  background: #ffffff;
+  border: 1px solid var(--ns-slate-200);
+  border-radius: var(--ns-radius-md);
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+.stat-card:hover {
+  border-color: var(--ns-primary-subtle);
+  transform: translateY(-2px);
+}
+.stat-number {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--ns-primary);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
+}
+
+/* University Cards */
+.uni-card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background-color: var(--ns-slate-100);
+}
+.uni-badge-type {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+  display: inline-block;
+}
+.badge-public {
+  background-color: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+.badge-private {
+  background-color: #eff6ff;
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+}
+
+/* Career Timeline */
+.career-timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+.career-timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background-color: #cbd5e1;
+}
+.timeline-step {
+  position: relative;
+  margin-bottom: 1.75rem;
+}
+.timeline-dot {
+  position: absolute;
+  left: -2rem;
+  top: 4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 3px solid var(--ns-primary);
+}
+.timeline-step:last-child {
+  margin-bottom: 0;
+}
+.timeline-step:last-child .timeline-dot {
+  border-color: var(--ns-secondary);
+}
+
+/* Horizontal Career Flow */
+.career-flow-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.career-flow-node {
+  background: #ffffff;
+  border: 1px solid var(--ns-slate-200);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ns-dark);
+  box-shadow: var(--ns-shadow-sm);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.career-flow-arrow {
+  color: var(--ns-slate-400);
+  font-size: 1.1rem;
+}
+
+/* Filter Bar */
+.filter-panel {
+  background: #ffffff;
+  border: 1px solid var(--ns-slate-200);
+  border-radius: var(--ns-radius-lg);
+  padding: 1.25rem;
+}
+
+/* Status Badges */
+.status-open {
+  color: #047857;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.status-closing {
+  color: #b45309;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.status-closed {
+  color: #64748b;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+/* Footer */
+.user-footer {
+  background-color: #0f172a;
+  color: #94a3b8;
+  padding: 4rem 0 2rem;
+  margin-top: 4rem;
+}
+.user-footer h6 {
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+.user-footer a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.user-footer a:hover {
+  color: #ffffff;
+}
+
+/* Comparison Table */
+.comparison-table th {
+  background-color: var(--ns-slate-100);
+  font-weight: 600;
+  color: var(--ns-dark);
+}
+.comparison-table td, .comparison-table th {
+  padding: 1rem;
+  vertical-align: middle;
+}

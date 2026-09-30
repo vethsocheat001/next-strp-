@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ស្វែងរកជំនាញដែលត្រូវនឹងអ្នក - NEXT STEP – ជំហានបន្ទាប់</title>
+  <meta name="description" content="តេស្តស្វែងរកមុខជំនាញសិក្សាដែលស័ក្តិសមជាមួយចំណង់ចំណូលចិត្ត និងបុគ្គលិកលក្ខណៈរបស់អ្នក។">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/user.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg user-navbar sticky-top">
+    <div class="container">
+      <a class="brand-logo" href="/index.html">
+        <div class="brand-icon-box"><i class="bi bi-mortarboard-fill"></i></div>
+        <div>
+          <span class="fs-5 fw-bold text-primary">NEXT STEP</span>
+          <span class="d-none d-sm-inline-block text-secondary small fw-medium ms-1">| ជំហានបន្ទាប់</span>
+        </div>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#userNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="userNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="/index.html">ទំព័រដើម</a></li>
+          <li class="nav-item"><a class="nav-link" href="universities.html">សាកលវិទ្យាល័យ</a></li>
+          <li class="nav-item"><a class="nav-link" href="majors.html">ជំនាញ</a></li>
+          <li class="nav-item"><a class="nav-link" href="scholarships.html">អាហារូបករណ៍</a></li>
+          <li class="nav-item"><a class="nav-link" href="compare.html">ប្រៀបធៀប</a></li>
+          <li class="nav-item"><a class="nav-link active" href="find-major.html">ស្វែងរកជំនាញ</a></li>
+          <li class="nav-item"><a class="nav-link" href="career-path.html">មាគ៌ាអាជីព</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">អំពីយើង</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+          <a href="favorites.html" class="btn btn-outline-light text-dark position-relative p-2" title="បញ្ជីរក្សាទុក">
+            <i class="bi bi-heart fs-5 text-danger"></i>
+            <span id="nav-fav-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display:none;">0</span>
+          </a>
+          <a href="account.html" class="btn btn-outline-primary d-flex align-items-center gap-2">
+            <i class="bi bi-person-circle"></i>
+            <span>គណនី</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <section class="py-5 bg-white border-bottom text-center">
+    <div class="container max-w-xl mx-auto">
+      <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-1.5 fw-semibold mb-2">តេស្តតម្រង់ទិសឆ្លាតវៃ</span>
+      <h2 class="display-6 fw-bold mb-2">មិនដឹងថាគួររៀនជំនាញអ្វី?</h2>
+      <p class="text-muted lead fs-6 mb-0">
+        ឆ្លើយសំណួរងាយៗ ៣ ជំហានខាងក្រោម ដើម្បីស្វែងយល់ថាតើជំនាញ និងសាកលវិទ្យាល័យណាខ្លះដែលត្រូវនឹងសមត្ថភាព និងចំណង់ចំណូលចិត្តរបស់អ្នកបំផុត។
+      </p>
+    </div>
+  </section>
+
+  <!-- QUIZ FORM -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <form id="find-major-form" class="card ns-card p-4 p-md-5 shadow-sm">
+            <!-- Step 1 -->
+            <div class="mb-5">
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <span class="badge bg-primary rounded-circle p-2 fs-6">1</span>
+                <h4 class="fw-bold mb-0">តើអ្នកចូលចិត្ត ឬចាប់អារម្មណ៍លើវិស័យណាជាងគេ? (What do you like?)</h4>
+              </div>
+              <div class="row g-3">
+                <div class="col-6 col-md-4">
+                  <input type="radio" class="btn-check" name="interest" id="int-tech" value="tech" checked>
+                  <label class="btn btn-outline-primary w-100 p-3 text-start h-100" for="int-tech">
+                    <i class="bi bi-laptop fs-4 d-block mb-1"></i>
+                    <strong>បច្ចេកវិទ្យា & IT</strong>
+                    <div class="text-muted small">កុំព្យូទ័រ កូដ AI</div>
+                  </label>
+                </div>
+                <div class="col-6 col-md-4">
+                  <input type="radio" class="btn-check" name="interest" id="int-biz" value="biz">
+                  <label class="btn btn-outline-primary w-100 p-3 text-start h-100" for="int-biz">
+                    <i class="bi bi-briefcase fs-4 d-block mb-1"></i>
+                    <strong>ធុរកិច្ច & ហិរញ្ញវត្ថុ</strong>
+                    <div class="text-muted small">ពាណិជ្ជកម្ម ធនាគារ</div>
+                  </label>
+                </div>
+                <div class="col-6 col-md-4">
+                  <input type="radio" class="btn-check" name="interest" id="int-health" value="health">
+                  <label class="btn btn-outline-primary w-100 p-3 text-start h-100" for="int-health">
+                    <i class="bi bi-heart-pulse fs-4 d-block mb-1"></i>
+                    <strong>សុខាភិបាល</strong>
+                    <div class="text-muted small">វេជ្ជសាស្ត្រ ឱសថ</div>
+                  </label>
+                </div>
+                <div class="col-6 col-md-4">
+                  <input type="radio" class="btn-check" name="interest" id="int-eng" value="eng">
+                  <label class="btn btn-outline-primary w-100 p-3 text-start h-100" for="int-eng">
+                    <i class="bi bi-gear-wide-connected fs-4 d-block mb-1"></i>
+                    <strong>វិស្វកម្ម & សំណង់</strong>
+                    <div class="text-muted small">ស្ថាបត្យកម្ម សំណង់</div>
+                  </label>
+                </div>
+                <div class="col-6 col-md-4">
+                  <input type="radio" class="btn-check" name="interest" id="int-law" value="law">
+                  <label class="btn btn-outline-primary w-100 p-3 text-start h-100" for="int-law">
+                    <i class="bi bi-journal-text fs-4 d-block mb-1"></i>
+                    <strong>ច្បាប់ & ទំនាក់ទំនង</strong>
+                    <div class="text-muted small">នីតិសាស្ត្រ ការទូត</div>
+                  </label>
+                </div>
+                <div class="col-6 col-md-4">
+                  <input type="radio" class="btn-check" name="interest" id="int-agri" value="agri">
+                  <label class="btn btn-outline-primary w-100 p-3 text-start h-100" for="int-agri">
+                    <i class="bi bi-flower1 fs-4 d-block mb-1"></i>
+                    <strong>កសិកម្ម & អាហារ</strong>
+                    <div class="text-muted small">ដំណាំ ចំណីអាហារ</div>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="mb-5">
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <span class="badge bg-primary rounded-circle p-2 fs-6">2</span>
+                <h4 class="fw-bold mb-0">តើមុខវិជ្ជាណាដែលអ្នករៀនពូកែ ឬចូលចិត្តនៅវិទ្យាល័យ?</h4>
+              </div>
+              <div class="row g-3">
+                <div class="col-6 col-md-3">
+                  <input type="radio" class="btn-check" name="subject" id="sub-math" value="math" checked>
+                  <label class="btn btn-outline-secondary w-100 p-3 text-center h-100" for="sub-math">
+                    <i class="bi bi-calculator fs-4 d-block mb-1 text-primary"></i>
+                    <strong>គណិតវិទ្យា</strong>
+                  </label>
+                </div>
+                <div class="col-6 col-md-3">
+                  <input type="radio" class="btn-check" name="subject" id="sub-science" value="science">
+                  <label class="btn btn-outline-secondary w-100 p-3 text-center h-100" for="sub-science">
+                    <i class="bi bi-virus fs-4 d-block mb-1 text-success"></i>
+                    <strong>ជីវវិទ្យា / គីមី</strong>
+                  </label>
+                </div>
+                <div class="col-6 col-md-3">
+                  <input type="radio" class="btn-check" name="subject" id="sub-lang" value="english">
+                  <label class="btn btn-outline-secondary w-100 p-3 text-center h-100" for="sub-lang">
+                    <i class="bi bi-translate fs-4 d-block mb-1 text-info"></i>
+                    <strong>ភាសាបរទេស</strong>
+                  </label>
+                </div>
+                <div class="col-6 col-md-3">
+                  <input type="radio" class="btn-check" name="subject" id="sub-social" value="social">
+                  <label class="btn btn-outline-secondary w-100 p-3 text-center h-100" for="sub-social">
+                    <i class="bi bi-book fs-4 d-block mb-1 text-warning"></i>
+                    <strong>ប្រវត្តិវិទ្យា / ពលរដ្ឋ</strong>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="mb-5">
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <span class="badge bg-primary rounded-circle p-2 fs-6">3</span>
+                <h4 class="fw-bold mb-0">តើបរិយាកាសការងារបែបណាដែលអ្នកចង់ធ្វើនាពេលអនាគត?</h4>
+              </div>
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <input type="radio" class="btn-check" name="workStyle" id="ws-tech" value="office" checked>
+                  <label class="btn btn-outline-secondary w-100 p-3 text-start h-100" for="ws-tech">
+                    <strong>ការិយាល័យ & កុំព្យូទ័រ</strong>
+                    <div class="text-muted small mt-1">ធ្វើការជាមួយបច្ចេកវិទ្យា កូដ និងការវិភាគទិន្នន័យ</div>
+                  </label>
+                </div>
+                <div class="col-md-4">
+                  <input type="radio" class="btn-check" name="workStyle" id="ws-people" value="people">
+                  <label class="btn btn-outline-secondary w-100 p-3 text-start h-100" for="ws-people">
+                    <strong>ទំនាក់ទំនងមនុស្ស & ដឹកនាំ</strong>
+                    <div class="text-muted small mt-1">ការចរចា ការគ្រប់គ្រងមនុស្ស និងការជួយសង្គ្រោះអ្នកជំងឺ</div>
+                  </label>
+                </div>
+                <div class="col-md-4">
+                  <input type="radio" class="btn-check" name="workStyle" id="ws-field" value="field">
+                  <label class="btn btn-outline-secondary w-100 p-3 text-start h-100" for="ws-field">
+                    <strong>ការដ្ឋាន & ស្រាវជ្រាវជាក់ស្តែង</strong>
+                    <div class="text-muted small mt-1">ការចុះការដ្ឋានសំណង់ ស្ទូឌីយោគំនូរ ឬកសិដ្ឋានស្រាវជ្រាវ</div>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-center pt-3 border-top">
+              <button type="submit" class="btn btn-ns-primary btn-lg px-5">
+                <i class="bi bi-sparkles me-2"></i> វិភាគ និងបង្ហាញជំនាញដែលស័ក្តិសម
+              </button>
+            </div>
+          </form>
+
+          <!-- Recommendation Result Container (hidden until submit) -->
+          <div id="quiz-result" class="d-none mt-5">
+            <div class="text-center mb-4">
+              <span class="badge bg-success bg-opacity-10 text-success px-3 py-1.5 fw-semibold mb-2">លទ្ធផលនៃការវិភាគ</span>
+              <h3 class="fw-bold">មុខជំនាញដែលស័ក្តិសមជាមួយអ្នកបំផុត (Recommended Majors)</h3>
+              <p class="text-muted">ផ្អែកលើការឆ្លើយសំណួររបស់អ្នក យើងសូមណែនាំមុខជំនាញខាងក្រោម៖</p>
+            </div>
+
+            <div class="row" id="recommended-majors-grid">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="user-footer">
+    <div class="container text-center small text-white-50">
+      &copy; 2026 NEXT STEP – ជំហានបន្ទាប់។ រក្សាសិទ្ធិគ្រប់យ៉ាង។
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/js/data.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/user.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initFindMajorPage();
+    });
+  </script>
+</body>
+</html>

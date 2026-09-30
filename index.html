@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXT STEP – ជំហានបន្ទាប់ | វេទិកាណែនាំការអប់រំ និងសាកលវិទ្យាល័យ</title>
+  <meta name="description" content="វេទិកាណែនាំការអប់រំសម្រាប់សិស្សវិទ្យាល័យកម្ពុជា ស្វែងរកសាកលវិទ្យាល័យ ជំនាញ អាហារូបករណ៍ និងមាគ៌ាអាជីព។">
+  <meta property="og:title" content="NEXT STEP – ជំហានបន្ទាប់">
+  <meta property="og:description" content="វេទិកាណែនាំការអប់រំសម្រាប់សិស្សវិទ្យាល័យកម្ពុជា ស្វែងរកសាកលវិទ្យាល័យ ជំនាញ អាហារូបករណ៍ និងមាគ៌ាអាជីព។">
+  <meta property="og:type" content="website">
+
+  <!-- Bootstrap 5 CSS & Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Core & Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/user.css">
+</head>
+<body>
+
+  <!-- TOP USER NAVBAR -->
+  <nav class="navbar navbar-expand-lg user-navbar sticky-top">
+    <div class="container">
+      <a class="brand-logo" href="index.html">
+        <div class="brand-icon-box">
+          <i class="bi bi-mortarboard-fill"></i>
+        </div>
+        <div>
+          <span class="fs-5 fw-bold text-primary">NEXT STEP</span>
+          <span class="d-none d-sm-inline-block text-secondary small fw-medium ms-1">| ជំហានបន្ទាប់</span>
+        </div>
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#userNavbar" aria-controls="userNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="userNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">ទំព័រដើម</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="user/universities.html">សាកលវិទ្យាល័យ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="user/majors.html">ជំនាញ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="user/scholarships.html">អាហារូបករណ៍</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="user/compare.html">
+              ប្រៀបធៀប <span id="nav-comp-badge" class="badge bg-primary rounded-pill small ms-1" style="display:none;">0</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="user/find-major.html">ស្វែងរកជំនាញ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="user/career-path.html">មាគ៌ាអាជីព</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="user/about.html">អំពីយើង</a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2">
+          <!-- Favorite link -->
+          <a href="user/favorites.html" class="btn btn-outline-light text-dark position-relative p-2" title="បញ្ជីរក្សាទុក">
+            <i class="bi bi-heart fs-5 text-danger"></i>
+            <span id="nav-fav-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display:none;">0</span>
+          </a>
+
+          <!-- Account button -->
+          <a href="user/account.html" class="btn btn-outline-primary d-flex align-items-center gap-2">
+            <i class="bi bi-person-circle"></i>
+            <span>គណនី</span>
+          </a>
+
+          <!-- Admin portal shortcut -->
+          <a href="admin/login.html" class="btn btn-sm btn-light text-muted ms-1" title="Admin Dashboard">
+            <i class="bi bi-shield-lock"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <div class="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill bg-primary bg-opacity-10 text-primary small fw-semibold mb-3">
+            <i class="bi bi-compass"></i>
+            <span>ការតម្រង់ទិសការសិក្សាសម្រាប់សិស្សវិទ្យាល័យកម្ពុជា</span>
+          </div>
+          <h1 class="hero-title">ស្វែងរកជំហានបន្ទាប់របស់អ្នក</h1>
+          <p class="hero-subtitle">
+            ស្វែងរកជំនាញ សាកលវិទ្យាល័យ និងអាហារូបករណ៍សម្រាប់អនាគតរបស់អ្នក។ ផ្តល់ព័ត៌មានលម្អិត ច្បាស់លាស់ និងអាចទុកចិត្តបាន ដើម្បីជួយអ្នកធ្វើការសម្រេចចិត្តដ៏ត្រឹមត្រូវ។
+          </p>
+
+          <!-- Search Box -->
+          <form id="heroSearchForm" class="hero-search-box mb-4">
+            <div class="input-group">
+              <span class="input-group-text bg-white border-0 text-muted">
+                <i class="bi bi-search fs-5"></i>
+              </span>
+              <input type="text" id="heroSearchInput" class="form-control border-0 shadow-none ps-2" placeholder="ស្វែងរកសាកលវិទ្យាល័យ ឬជំនាញ...">
+              <button class="btn btn-ns-primary px-4" type="submit">
+                ស្វែងរក
+              </button>
+            </div>
+          </form>
+
+          <div class="d-flex flex-wrap align-items-center gap-3">
+            <a href="user/find-major.html" class="btn btn-ns-secondary d-inline-flex align-items-center gap-2">
+              <i class="bi bi-lightbulb"></i>
+              <span>ស្វែងរកជំនាញត្រូវនឹងអ្នក</span>
+            </a>
+            <a href="user/universities.html" class="btn btn-outline-secondary d-inline-flex align-items-center gap-2">
+              <i class="bi bi-buildings"></i>
+              <span>មើលសាកលវិទ្យាល័យទាំងអស់</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="hero-img-wrapper">
+            <img src="/assets/images/banners/hero.jpg" alt="សិស្សានុសិស្សកម្ពុជានៅសាកលវិទ្យាល័យ">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATISTICS SECTION -->
+  <section class="py-5 bg-white border-bottom border-top">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <div class="stat-number">50+</div>
+            <div class="text-muted small fw-medium">សាកលវិទ្យាល័យទូទាំងប្រទេស</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <div class="stat-number">100+</div>
+            <div class="text-muted small fw-medium">មុខជំនាញសិក្សាពេញនិយម</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <div class="stat-number">20+</div>
+            <div class="text-muted small fw-medium">ឱកាសអាហារូបករណ៍</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card">
+            <div class="stat-number">500+</div>
+            <div class="text-muted small fw-medium">សិស្សានុសិស្សបានទទួលការណែនាំ</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POPULAR UNIVERSITIES SECTION -->
+  <section class="py-5">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-end mb-4">
+        <div>
+          <span class="text-primary fw-semibold small text-uppercase">គ្រឹះស្ថានឧត្តមសិក្សា</span>
+          <h2 class="fw-bold mt-1">សាកលវិទ្យាល័យពេញនិយម</h2>
+          <p class="text-muted mb-0">សាកលវិទ្យាល័យរដ្ឋ និងឯកជនឈានមុខគេក្នុងប្រទេសកម្ពុជា</p>
+        </div>
+        <a href="user/universities.html" class="btn btn-ns-outline-primary mt-2 mt-sm-0">
+          មើលទាំងអស់ <i class="bi bi-arrow-right ms-1"></i>
+        </a>
+      </div>
+
+      <div class="row" id="home-popular-universities">
+        <!-- Rendered via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FIND YOUR MAJOR BANNER -->
+  <section class="py-5 bg-primary text-white position-relative overflow-hidden my-3">
+    <div class="container position-relative" style="z-index: 2;">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <span class="badge bg-white text-primary mb-2 px-3 py-1.5 fw-semibold">តេស្តចំណង់ចំណូលចិត្ត</span>
+          <h2 class="display-6 fw-bold text-white mb-2">មិនដឹងថាគួររៀនជំនាញអ្វី?</h2>
+          <p class="lead text-white-50 mb-4">
+            ឆ្លើយសំណួរងាយៗត្រឹមតែ ៣ សំណួរ ដើម្បីស្វែងរកមុខជំនាញដែលស័ក្តិសមបំផុតជាមួយចំណង់ចំណូលចិត្ត និងបុគ្គលិកលក្ខណៈរបស់អ្នក។
+          </p>
+          <a href="user/find-major.html" class="btn btn-warning btn-lg px-4 fw-bold text-dark shadow-sm">
+            <i class="bi bi-magic me-2"></i> ចាប់ផ្តើមស្វែងរកជំនាញ
+          </a>
+        </div>
+        <div class="col-lg-4 d-none d-lg-block text-center">
+          <i class="bi bi-lightbulb-fill text-warning" style="font-size: 8rem; opacity: 0.85;"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POPULAR MAJORS SECTION -->
+  <section class="py-5">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-end mb-4">
+        <div>
+          <span class="text-primary fw-semibold small text-uppercase">មុខជំនាញសិក្សា</span>
+          <h2 class="fw-bold mt-1">ជំនាញកំពុងមានតម្រូវការខ្ពស់</h2>
+          <p class="text-muted mb-0">មុខវិជ្ជាពេញនិយម និងមានឱកាសការងារទូលំទូលាយនៅលើទីផ្សារ</p>
+        </div>
+        <a href="user/majors.html" class="btn btn-ns-outline-primary mt-2 mt-sm-0">
+          មើលជំនាញទាំងអស់ <i class="bi bi-arrow-right ms-1"></i>
+        </a>
+      </div>
+
+      <div class="row" id="home-popular-majors">
+        <!-- Rendered via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CAREER PATH TIMELINE SECTION -->
+  <section class="py-5 bg-white border-top border-bottom">
+    <div class="container">
+      <div class="text-center max-w-xl mx-auto mb-5">
+        <span class="text-primary fw-semibold small text-uppercase">មាគ៌ាឆ្ពោះទៅកាន់ភាពជោគជ័យ</span>
+        <h2 class="fw-bold mt-1">គំរូមាគ៌ាអាជីព (Career Path)</h2>
+        <p class="text-muted">ឧទាហរណ៍៖ មាគ៌ារបស់សិស្សផ្នែកវិទ្យាសាស្ត្រកុំព្យូទ័រ (Computer Science)</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 bg-light">
+            <div class="career-flow-container justify-content-center">
+              <div class="career-flow-node">
+                <i class="bi bi-book-half text-primary fs-5"></i>
+                <div>
+                  <div class="small text-muted">ដំណាក់កាលទី ១</div>
+                  <div>សិស្សវិទ្យាល័យ (High School)</div>
+                </div>
+              </div>
+
+              <i class="bi bi-arrow-right career-flow-arrow d-none d-md-block"></i>
+              <i class="bi bi-arrow-down career-flow-arrow d-md-none w-100 text-center my-1"></i>
+
+              <div class="career-flow-node">
+                <i class="bi bi-mortarboard text-primary fs-5"></i>
+                <div>
+                  <div class="small text-muted">ដំណាក់កាលទី ២</div>
+                  <div>ថ្នាក់បរិញ្ញាបត្រ (Bachelor Degree)</div>
+                </div>
+              </div>
+
+              <i class="bi bi-arrow-right career-flow-arrow d-none d-md-block"></i>
+              <i class="bi bi-arrow-down career-flow-arrow d-md-none w-100 text-center my-1"></i>
+
+              <div class="career-flow-node">
+                <i class="bi bi-code-slash text-success fs-5"></i>
+                <div>
+                  <div class="small text-muted">ដំណាក់កាលទី ៣</div>
+                  <div>ជំនាញសរសេរកូដ (Coding Skills)</div>
+                </div>
+              </div>
+
+              <i class="bi bi-arrow-right career-flow-arrow d-none d-md-block"></i>
+              <i class="bi bi-arrow-down career-flow-arrow d-md-none w-100 text-center my-1"></i>
+
+              <div class="career-flow-node">
+                <i class="bi bi-briefcase text-info fs-5"></i>
+                <div>
+                  <div class="small text-muted">ដំណាក់កាលទី ៤</div>
+                  <div>កម្មសិក្សា (Internship)</div>
+                </div>
+              </div>
+
+              <i class="bi bi-arrow-right career-flow-arrow d-none d-md-block"></i>
+              <i class="bi bi-arrow-down career-flow-arrow d-md-none w-100 text-center my-1"></i>
+
+              <div class="career-flow-node">
+                <i class="bi bi-laptop text-warning fs-5"></i>
+                <div>
+                  <div class="small text-muted">ដំណាក់កាលទី ៥</div>
+                  <div>Junior Developer</div>
+                </div>
+              </div>
+
+              <i class="bi bi-arrow-right career-flow-arrow d-none d-md-block"></i>
+              <i class="bi bi-arrow-down career-flow-arrow d-md-none w-100 text-center my-1"></i>
+
+              <div class="career-flow-node bg-primary text-white border-0">
+                <i class="bi bi-trophy-fill text-warning fs-5"></i>
+                <div>
+                  <div class="small text-white-50">គោលដៅអាជីព</div>
+                  <div>Senior Software Developer</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center mt-4">
+              <a href="user/career-path.html" class="btn btn-outline-primary">
+                ស្វែងយល់បន្ថែមអំពីមាគ៌ាអាជីពផ្សេងទៀត <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST SCHOLARSHIPS SECTION -->
+  <section class="py-5">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-end mb-4">
+        <div>
+          <span class="text-primary fw-semibold small text-uppercase">ឱកាសសិក្សា</span>
+          <h2 class="fw-bold mt-1">អាហារូបករណ៍ចុងក្រោយបង្អស់</h2>
+          <p class="text-muted mb-0">ឱកាសអាហារូបករណ៍ថ្នាក់រដ្ឋ ឯកជន និងអាហារូបករណ៍ទៅក្រៅប្រទេស</p>
+        </div>
+        <a href="user/scholarships.html" class="btn btn-ns-outline-primary mt-2 mt-sm-0">
+          មើលអាហារូបករណ៍ទាំងអស់ <i class="bi bi-arrow-right ms-1"></i>
+        </a>
+      </div>
+
+      <div class="row" id="home-latest-scholarships">
+        <!-- Rendered via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE NEXT STEP SECTION -->
+  <section class="py-5 bg-white border-top">
+    <div class="container">
+      <div class="text-center max-w-xl mx-auto mb-5">
+        <span class="text-primary fw-semibold small text-uppercase">អត្ថប្រយោជន៍</span>
+        <h2 class="fw-bold mt-1">ហេតុអ្វីគួរជ្រើសរើស NEXT STEP?</h2>
+        <p class="text-muted">យើងរៀបចំព័ត៌មានអប់រំដ៏ទូលំទូលាយឱ្យមានរបៀបរៀបរយ និងងាយស្រួលស្វែងរកបំផុត</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="p-4 border rounded-3 h-100 bg-light">
+            <div class="fs-2 text-primary mb-3"><i class="bi bi-search"></i></div>
+            <h5 class="fw-bold mb-2">ងាយស្រួលស្វែងរក (Easy to Search)</h5>
+            <p class="text-muted small mb-0">ស្វែងរកសាកលវិទ្យាល័យ និងជំនាញដែលអ្នកចង់រៀនបានយ៉ាងឆាប់រហ័ស តាមរយៈប្រព័ន្ធតម្រងឆ្លាតវៃ។</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="p-4 border rounded-3 h-100 bg-light">
+            <div class="fs-2 text-success mb-3"><i class="bi bi-folder-check"></i></div>
+            <h5 class="fw-bold mb-2">ព័ត៌មានមានរបៀបរៀបរយ (Organized)</h5>
+            <p class="text-muted small mb-0">ប្រមូលផ្តុំទិន្នន័យច្បាស់លាស់ ទាំងតម្លៃសិក្សា លក្ខខណ្ឌអាហារូបករណ៍ និងមុខវិជ្ជាត្រូវរៀន។</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="p-4 border rounded-3 h-100 bg-light">
+            <div class="fs-2 text-info mb-3"><i class="bi bi-arrow-left-right"></i></div>
+            <h5 class="fw-bold mb-2">ប្រៀបធៀបសាកលវិទ្យាល័យ (Comparison)</h5>
+            <p class="text-muted small mb-0">អាចប្រៀបធៀបសាកលវិទ្យាល័យពីរទន្ទឹមគ្នា ដើម្បីវិភាគលើតម្លៃ ទីតាំង និងបរិក្ខារសិក្សា។</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="p-4 border rounded-3 h-100 bg-light">
+            <div class="fs-2 text-warning mb-3"><i class="bi bi-compass"></i></div>
+            <h5 class="fw-bold mb-2">ការតម្រង់ទិសអាជីព (Career Guidance)</h5>
+            <p class="text-muted small mb-0">បង្ហាញមាគ៌ាពីកម្រិតវិទ្យាល័យ រហូតដល់ទីផ្សារការងារ និងកម្រិតប្រាក់ខែប៉ាន់ស្មាន។</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="p-4 border rounded-3 h-100 bg-light">
+            <div class="fs-2 text-danger mb-3"><i class="bi bi-gift"></i></div>
+            <h5 class="fw-bold mb-2">ព័ត៌មានអាហារូបករណ៍ទាន់ហេតុការណ៍</h5>
+            <p class="text-muted small mb-0">មិនឱ្យរំលងឱកាសអាហារូបករណ៍សំខាន់ៗ ទាំងថ្នាក់ជាតិ និងអន្តរជាតិ។</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="p-4 border rounded-3 h-100 bg-light">
+            <div class="fs-2 text-primary mb-3"><i class="bi bi-phone"></i></div>
+            <h5 class="fw-bold mb-2">គាំទ្រគ្រប់ឧបករណ៍ (Responsive)</h5>
+            <p class="text-muted small mb-0">ដំណើរការរលូន និងស្រស់ស្អាតទាំងលើទូរស័ព្ទដៃ Tablet កុំព្យូទ័រយួរដៃ និង Desktop។</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USER FOOTER -->
+  <footer class="user-footer">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-12 col-lg-4">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <div class="brand-icon-box" style="width: 32px; height: 32px; font-size: 1rem;">
+              <i class="bi bi-mortarboard-fill"></i>
+            </div>
+            <h5 class="text-white fw-bold mb-0">NEXT STEP – ជំហានបន្ទាប់</h5>
+          </div>
+          <p class="small text-white-50">
+            ជួយសិស្សានុសិស្សកម្ពុជាស្វែងរកមាគ៌ាដ៏ត្រឹមត្រូវសម្រាប់អនាគត តាមរយៈព័ត៌មានអប់រំដ៏សម្បូរបែប និងការណែនាំជាក់ស្តែង។
+          </p>
+          <div class="d-flex gap-3 fs-5 mt-3">
+            <a href="https://facebook.com" target="_blank" class="text-white-50"><i class="bi bi-facebook"></i></a>
+            <a href="https://telegram.org" target="_blank" class="text-white-50"><i class="bi bi-telegram"></i></a>
+            <a href="https://instagram.com" target="_blank" class="text-white-50"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6>តំណភ្ជាប់រហ័ស</h6>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><a href="index.html">ទំព័រដើម</a></li>
+            <li class="mb-2"><a href="user/universities.html">សាកលវិទ្យាល័យ</a></li>
+            <li class="mb-2"><a href="user/majors.html">ជំនាញ</a></li>
+            <li class="mb-2"><a href="user/scholarships.html">អាហារូបករណ៍</a></li>
+            <li class="mb-2"><a href="user/about.html">អំពីយើង</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6>ឧបករណ៍ជំនួយ</h6>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><a href="user/find-major.html">ស្វែងរកជំនាញ</a></li>
+            <li class="mb-2"><a href="user/compare.html">ប្រៀបធៀបសាលា</a></li>
+            <li class="mb-2"><a href="user/career-path.html">មាគ៌ាអាជីព</a></li>
+            <li class="mb-2"><a href="user/favorites.html">បញ្ជីរក្សាទុក</a></li>
+            <li class="mb-2"><a href="user/account.html">គណនីរបស់ខ្ញុំ</a></li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <h6>ទំនាក់ទំនង</h6>
+          <ul class="list-unstyled small text-white-50">
+            <li class="mb-2"><i class="bi bi-geo-alt me-2 text-primary"></i>រាជធានីភ្នំពេញ ព្រះរាជាណាចក្រកម្ពុជា</li>
+            <li class="mb-2"><i class="bi bi-envelope me-2 text-primary"></i>contact@nextstep.edu.kh</li>
+            <li class="mb-2"><i class="bi bi-telephone me-2 text-primary"></i>+855 (0)23 999 888</li>
+          </ul>
+          <div class="mt-3 pt-3 border-top border-secondary">
+            <a href="admin/login.html" class="btn btn-sm btn-outline-light text-white-50">
+              <i class="bi bi-lock me-1"></i> ចូលផ្ទាំងគ្រប់គ្រង (Admin Login)
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-3 border-top border-secondary text-center small text-white-50">
+        &copy; 2026 NEXT STEP – ជំហានបន្ទាប់។ រក្សាសិទ្ធិគ្រប់យ៉ាង។
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Project Scripts -->
+  <script src="/assets/js/data.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/user.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initHomePage();
+    });
+  </script>
+</body>
+</html>
